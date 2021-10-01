@@ -2,6 +2,8 @@ package A01;
 
 import static org.junit.Assert.*;
 
+
+
 import org.junit.After;
 import org.junit.Before;
 import org.junit.BeforeClass;
@@ -18,46 +20,46 @@ public class Arraytest{
 	@Test
 	public void test100()
 	{
-		Array array = new Array();
-		Array.insert(1,0);
-		Array.insert(2,2);
-		Array.insert(3,3);
-		Array.insert(4,4);
-		Array.display();
+		
+		array.insert(1,0);
+		array.insert(2,2);
+		array.insert(3,3);
+		array.insert(4,4);
+		array.display();
 	}
 
         @Test
         public void test101()
 	{
-		Array array = new Array();
-		Array.insert(100,0);
-		Array.insert(102,1);
-		Array.insert(103,2);
-		Array.insert(104,3);
 		
-		Array.delete(2);
-                Array.delete(3);
-                assertFalse(Array.linearSearch(3));
+		array.insert(100,0);
+		array.insert(102,1);
+		array.insert(103,2);
+		array.insert(104,3);
+		
+		array.delete(2);
+                array.delete(3);
+                assertFalse(array.linearSearch(3));
 	}
 
         @Test 
         public void test102()
 	{
-		Array array = new Array();
 		
-		Array.insert(0,0);
-		Array.insert(1,1);
-		Array.insert(2,-1);
+		
+		array.insert(0,0);
+		array.insert(1,1);
+		array.insert(2,-1);
 		System.out.println("NullPointerException");	
 	}
 
         @Test
         public void test103()
 	{
-		Array array = new Array();
-		Array.insert(0,0);
-		Array.insert(1,1);
-		Array.insert(2,101);
+		
+		array.insert(0,0);
+		array.insert(1,1);
+		array.insert(2,101);
      	System.out.println("NullPointerException");
 		
 	}
@@ -65,56 +67,55 @@ public class Arraytest{
         @Test
         public void test104()
 	{
-		Array array = new Array();
-		Array.insert(100,0);
-		Array.insert(102,1);
-		Array.insert(103,2);
-		Array.insert(104,3);
 		
-		Array.delete(1);
-                assertTrue(Array.linearSearch(1));
+		array.insert(100,0);
+		array.insert(102,1);
+		array.insert(103,2);
+		array.insert(104,3);
+		
+		array.delete(1);
+                assertTrue(array.linearSearch(1));
 	}
 
         @Test
         public void test105()
 	{
-		Array array = new Array(); 
-		Array.insert(50,0);
-		Array.insert(55,1);
-		assertTrue(Array.linearSearch(55));
+		
+		array.insert(50,0);
+		array.insert(55,1);
+		assertTrue(array.linearSearch(55));
 	
 	}
 
         @Test
         public void test106()
 	{
-		Array array = new Array();
-		Array.insert(10,0);
-		Array.insert(17,1);
-		Array.insert(3,2);
-		Array.insert(20,3);
-		Array.bubbleSort();
+		array.insert(10,0);
+		array.insert(17,1);
+		array.insert(3,2);
+		array.insert(20,3);
+		array.bubbleSort();
 		
 		int[] arr = {3,10,17,20};
-		assertArrayEquals(Array.array,arr);
+		assertArrayEquals(array.array,arr);
 	}
 
         @Test
         public void test107()
 	{
-		Array array = new Array();
-		Array.insert(10,0);
-		Array.insert(17,1);
-		Array.insert(3,2);
-		Array.insert(20,3);
-		Array.bubbleSort();
+		
+		array.insert(10,0);
+		array.insert(17,1);
+		array.insert(3,2);
+		array.insert(20,3);
+		array.bubbleSort();
 		
                 boolean bool = false;
 		int[] newarr = {3,10,17,20};
 		
                 for(int i = 0; i < array.size;i++)
                  {
-                      if(Array.array[i] == newarr[i])
+                      if(array.array[i] == newarr[i])
                       {
                           bool = true;
                       }
@@ -124,52 +125,52 @@ public class Arraytest{
         @Test
         public void test108()
 	{
-		Array array = new Array();
-		Array.insert(10,0);
-		Array.insert(15,1);
-		Array.insert(11,2);
-		Array.insert(14,3);
-		assertTrue(Array.binarySearch(11, 0, array.size));
+		
+		array.insert(10,0);
+		array.insert(15,1);
+		array.insert(11,2);
+		array.insert(14,3);
+		assertTrue(array.binarySearch(11, 0, array.size));
 	}
 
        @Test
        public void test109()
 	{
-		Array array = new Array();
-		Array.insert(-1,0);
-		Array.insert(-2,1);
-		Array.insert(-3,2);
-		Array.insert(-2,3);
-		assertTrue(Array.binarySearch(-1, 0, 4));
+		
+		array.insert(-1,0);
+		array.insert(-2,1);
+		array.insert(-3,2);
+		array.insert(-2,3);
+		assertTrue(array.binarySearch(-1, 0, 4));
 	}
 
        @Test
        public void test110()
 	{
-		Array array = new Array();
-		Array.insert(-1,0);
-		Array.insert(-2,1);
-		Array.insert(-3,2);
-		Array.insert(-2,3);
-		assertTrue(Array.binarySearch(-1, 0, 4));
+		
+		array.insert(-1,0);
+		array.insert(-2,1);
+		array.insert(-3,2);
+		array.insert(-2,3);
+		assertTrue(array.binarySearch(-1, 0, 4));
 	}
 
         @Test
         public void test111()
 	{
-		Array array = new Array();
-		Array.insert(20,0);
-		Array.insert(33,1);
-		Array.insert(12,2);
-                Array.insert(10,3);
-                Array.insert(5,4);
-                Array.insert(43,5);
+		
+		array.insert(20,0);
+		array.insert(33,1);
+		array.insert(12,2);
+                array.insert(10,3);
+                array.insert(5,4);
+                array.insert(43,5);
 		
 		for(int i = 0; i < array.size; i++)
 		{
-		    if(Array.array[i] == 10)
+		    if(array.array[i] == 10)
 		    {
-		       assertEquals(10,Array.array[i]);
+		       assertEquals(10,array.array[i]);
 		    }
 		}
 	
