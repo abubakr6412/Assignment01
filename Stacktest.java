@@ -33,6 +33,7 @@ public void init() {
 	stack.push(3);
 	stack.push(10);
 	stack.push(5);
+	stack.display();
 	assertEquals(5,stack.top());
 	}
 	

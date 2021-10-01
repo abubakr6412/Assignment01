@@ -33,6 +33,7 @@ public class Queuetest {
 	public void test101() {
 	queue.enqueue(5);
 	queue.enqueue(6);
+	queue.display();
 	queue.dequeue();
 	assertEquals(6,queue.head.key);
 	}

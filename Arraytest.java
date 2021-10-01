@@ -38,8 +38,8 @@ public class Arraytest{
 		array.insert(104,3);
 		
 		array.delete(2);
-                array.delete(3);
-                assertFalse(array.linearSearch(3));
+        array.delete(3);
+        assertFalse(array.linearSearch(3));
 	}
 
         @Test 
@@ -47,9 +47,9 @@ public class Arraytest{
 	{
 		
 		
-		array.insert(0,0);
+		array.insert(0,-1);
 		array.insert(1,1);
-		array.insert(2,-1);
+		array.insert(2,2);
 		System.out.println("NullPointerException");	
 	}
 
@@ -57,10 +57,10 @@ public class Arraytest{
         public void test103()
 	{
 		
-		array.insert(0,0);
-		array.insert(1,1);
-		array.insert(2,101);
-     	System.out.println("NullPointerException");
+        	array.insert(0,0);
+    		array.insert(1,101);
+    		array.insert(2,102);
+         	System.out.println("NullPointerException");
 		
 	}
 
@@ -74,7 +74,7 @@ public class Arraytest{
 		array.insert(104,3);
 		
 		array.delete(1);
-                assertTrue(array.linearSearch(1));
+        assertFalse(array.linearSearch(1));
 	}
 
         @Test
@@ -130,6 +130,7 @@ public class Arraytest{
 		array.insert(15,1);
 		array.insert(11,2);
 		array.insert(14,3);
+		array.display();
 		assertTrue(array.binarySearch(11, 0, array.size));
 	}
 
@@ -137,34 +138,25 @@ public class Arraytest{
        public void test109()
 	{
 		
-		array.insert(-1,0);
-		array.insert(-2,1);
-		array.insert(-3,2);
-		array.insert(-2,3);
-		assertTrue(array.binarySearch(-1, 0, 4));
+		array.insert(-6,0);
+		array.insert(-4,1);
+		array.insert(-8,2);
+		array.insert(-9,3);
+		assertTrue(array.binarySearch(-4, 0, 3));
 	}
 
-       @Test
-       public void test110()
-	{
-		
-		array.insert(-1,0);
-		array.insert(-2,1);
-		array.insert(-3,2);
-		array.insert(-2,3);
-		assertTrue(array.binarySearch(-1, 0, 4));
-	}
+  
 
         @Test
-        public void test111()
+        public void test110()
 	{
 		
 		array.insert(20,0);
 		array.insert(33,1);
 		array.insert(12,2);
-                array.insert(10,3);
-                array.insert(5,4);
-                array.insert(43,5);
+        array.insert(10,3);
+        array.insert(5,4);
+        array.insert(43,5);
 		
 		for(int i = 0; i < array.size; i++)
 		{

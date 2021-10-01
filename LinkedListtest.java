@@ -53,6 +53,7 @@ public class LinkedListtest {
 				list.pushFront(376);
 				list.pushFront(234);
 				list.pushFront(423);
+				list.display();
 				
 				assertEquals(234,list.head.next.key);
 				//list.deleteList();
